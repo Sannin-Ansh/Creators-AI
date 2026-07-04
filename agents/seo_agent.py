@@ -48,7 +48,7 @@ Please generate the SEO optimization package according to your system instructio
         
         try:
             response = client.models.generate_content(
-                model="gemini-2.5-flash",
+                model="gemini-2.5-flash-lite",
                 contents=user_input_prompt,
                 config=types.GenerateContentConfig(
                     system_instruction=self.system_prompt
