@@ -165,7 +165,7 @@ coordinator = CreatorsCoordinator(api_key=st.session_state.api_key)
 
 # App Title & Subtitle
 st.markdown("<h1 class='main-title'>Creators AI</h1>", unsafe_allow_html=True)
-st.markdown("<p class='sub-title'>YouTube Creator Intelligence System — Powered by Gemini 1.5</p>", unsafe_allow_html=True)
+st.markdown("<p class='sub-title'>YouTube Creator Intelligence System — Powered by Gemini 3.1</p>", unsafe_allow_html=True)
 
 # Main Prompt warning if API key is missing
 if not st.session_state.api_key:

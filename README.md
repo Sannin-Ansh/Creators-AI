@@ -85,7 +85,7 @@ graph TD
 
 *   **Core Logic**: Python 3.9+ 🐍
 *   **Orchestration**: Custom state-based Coordinator Pattern 🔄
-*   **AI Engine**: Gemini 2.5 Flash Lite via the official `google-genai` SDK 🧠
+*   **AI Engine**: Gemini 3.1 Flash Lite via the official `google-genai` SDK 🧠
 *   **Frontend**: Streamlit (custom styling, glassmorphism, responsive tabs) 💻
 *   **APIs & Data Scraping**:
     *   `youtube-search-python` for fetching video metadata 🎥

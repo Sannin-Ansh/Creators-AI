@@ -75,9 +75,9 @@ Please analyze this data and generate a comprehensive Trend Analysis Report acco
 """
         
         try:
-            # Use gemini-2.5-flash-lite as the default model
+            # Use gemini-3.1-flash-lite as the default model
             response = client.models.generate_content(
-                model="gemini-2.5-flash-lite",
+                model="gemini-3.1-flash-lite",
                 contents=user_input_prompt,
                 config=types.GenerateContentConfig(
                     system_instruction=self.system_prompt
