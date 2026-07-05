@@ -100,14 +100,15 @@ Navigate to your project directory and run:
 pip install -r requirements.txt
 ```
 
-### 3️⃣ Configure API Credentials
-You need a Gemini API Key to run the agents. You can get one for free at [Google AI Studio](https://aistudio.google.com/).
+### 3️⃣ Configure API Credentials (Optional)
+The system is **pre-configured with a Gemini API Key**, so you can run the agents out of the box without providing your own.
 
-Set the key in your environment variables or create a `.env` file in the root directory:
-```env
-GEMINI_API_KEY=your_gemini_api_key_here
-```
-*(Note: If you run the web dashboard, you can also paste the API key directly into the sidebar input field).*
+If you wish to override the pre-configured key and use your own:
+*   Set the `GEMINI_API_KEY` environment variable or create a `.env` file in the root directory:
+    ```env
+    GEMINI_API_KEY=your_custom_gemini_api_key
+    ```
+*   Or paste your custom key directly into the sidebar input field in the web dashboard.
 
 ---
 
@@ -119,16 +120,18 @@ Run the main script without parameters to start the Streamlit-based web dashboar
 python main.py
 ```
 This will start the server and open a browser tab (typically at `http://localhost:8501`). The UI features:
-*   Interactive configurations (video duration, tone, custom API key).
+*   Interactive configurations (video duration, tone, and optional custom API key override).
 *   Live progress bars and log outputs as agents process details.
 *   Editable agent outputs, allowing you to fine-tune a title before generating the script.
 *   One-click download of the complete video production package.
 
 ### Option B: Run Automated CLI Pipeline ⚙️
-To quickly generate a complete video package straight to your filesystem:
+To quickly generate a complete video package straight to your filesystem using the pre-configured key:
 ```bash
-python main.py --topic "learning rust programming" --api-key "YOUR_GEMINI_API_KEY"
+python main.py --topic "learning rust programming"
 ```
+*(Note: You can optionally pass your own key by appending `--api-key "YOUR_GEMINI_API_KEY"` to the command).*
+
 This runs the full multi-agent pipeline sequentially and writes the output directly to a file named:
 `creators_ai_learning_rust_programming.md`.
 
