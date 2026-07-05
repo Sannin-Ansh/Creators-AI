@@ -28,24 +28,24 @@ graph TD
     classDef io fill:#ECEFF1,stroke:#607D8B,stroke-width:2px,color:#263238;
 
     %% Workflow Flowchart
-    Input([💡 Creator Topic Input]) ::: io
-    Coord[🔄 Workflow Coordinator] ::: coordinator
+    Input([💡 Creator Topic Input])
+    Coord[🔄 Workflow Coordinator]
     
     %% Trend Phase
-    AgentTrend[📊 Trend Research Agent] ::: agent
-    ToolYT[(🎥 YouTube Search)] ::: tool
-    ToolReddit[(🤖 Reddit Search)] ::: tool
-    ToolNews[(📰 Google News RSS)] ::: tool
+    AgentTrend[📊 Trend Research Agent]
+    ToolYT[(🎥 YouTube Search)]
+    ToolReddit[(🤖 Reddit Search)]
+    ToolNews[(📰 Google News RSS)]
     
     %% Title/Thumbnail Phase
-    AgentThumb[🎨 Title & Thumbnail Agent] ::: agent
-    ToolPollinations[(🖼️ Pollinations.ai)] ::: tool
+    AgentThumb[🎨 Title & Thumbnail Agent]
+    ToolPollinations[(🖼️ Pollinations.ai)]
     
     %% Script & SEO Phases
-    AgentScript[📝 Script Planner Agent] ::: agent
-    AgentSEO[🔍 SEO Agent] ::: agent
+    AgentScript[📝 Script Planner Agent]
+    AgentSEO[🔍 SEO Agent]
     
-    Output([📦 Streamlit UI / Markdown Package]) ::: io
+    Output([📦 Streamlit UI / Markdown Package])
 
     %% Connections
     Input --> Coord
@@ -71,6 +71,12 @@ graph TD
     AgentSEO ==> |"Chapters, Description & Tags"| Coord
     
     Coord --> Output
+
+    %% Assign classes to nodes
+    class Input,Output io;
+    class Coord coordinator;
+    class AgentTrend,AgentThumb,AgentScript,AgentSEO agent;
+    class ToolYT,ToolReddit,ToolNews,ToolPollinations tool;
 ```
 
 ---
